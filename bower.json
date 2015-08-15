@@ -1,0 +1,23 @@
+{
+  "name": "flex-layout",
+  "description": "flex-layout - easy way to layout webpage with flex box",
+  "main": [
+    "css/flex-layout.min.css"
+  ],
+  "keywords": [
+    "flex",
+    "flex layout",
+    "angular material layout",
+    "flex box"
+  ],
+  "authors": [
+    "An Xie <shane369@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "builder",
+    "example"
+  ],
+  "version": "0.0.1"
+}
