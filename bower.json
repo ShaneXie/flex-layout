@@ -1,6 +1,6 @@
 {
-  "name": "flex-layout",
-  "description": "flex-layout - easy way to layout webpage with flex box",
+  "name": "flexbox-layout",
+  "description": "flexbox-layout - easy way to layout webpage with flexbox",
   "main": [
     "css/flex-layout.min.css"
   ],
@@ -8,7 +8,7 @@
     "flex",
     "flex layout",
     "angular material layout",
-    "flex box"
+    "flexbox"
   ],
   "authors": [
     "An Xie <shane369@gmail.com>"
