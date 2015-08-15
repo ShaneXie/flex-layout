@@ -1,6 +1,6 @@
 {
-  "name": "flexbox-layout",
-  "description": "flexbox-layout - easy way to layout webpage with flexbox",
+  "name": "ng-flex-layout",
+  "description": "easy way to layout webpage with flexbox, pull from angular material.",
   "main": [
     "css/flex-layout.min.css"
   ],
