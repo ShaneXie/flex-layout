@@ -2,7 +2,7 @@
 --
 Pull from Angular Material. Make flex box layout much easier!  
 
-![previe](./screenshoot.png)
+[![preview](./screenshoot.png)](http://shanexie.github.io/ng-flex-layout/)
 ## Install
 * use bower: `bower install ng-flex-layout`
 * Or, download the compiled and minified css file [here](https://raw.githubusercontent.com/ShaneXie/ng-flex-layout/master/css/flex-layout.min.css).  
