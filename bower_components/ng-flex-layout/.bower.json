@@ -1,0 +1,34 @@
+{
+  "name": "ng-flex-layout",
+  "description": "easy way to layout webpage with flexbox, pull from angular material.",
+  "main": [
+    "css/flex-layout.min.css"
+  ],
+  "keywords": [
+    "flex",
+    "flex layout",
+    "angular material layout",
+    "flexbox"
+  ],
+  "authors": [
+    "An Xie <shane369@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "builder",
+    "example"
+  ],
+  "version": "0.0.1",
+  "homepage": "https://github.com/ShaneXie/ng-flex-layout",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "0dff4525fcedd3a2ba38b4c8c04d200ce219ae19"
+  },
+  "_source": "git://github.com/ShaneXie/ng-flex-layout.git",
+  "_target": "~0.0.1",
+  "_originalSource": "ng-flex-layout",
+  "_direct": true
+}

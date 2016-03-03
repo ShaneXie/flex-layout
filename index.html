@@ -5,6 +5,7 @@
     <title>Ng-flex-layout Demo by ShaneXie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="bower_components/ng-flex-layout/css/flex-layout.min.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
@@ -12,15 +13,125 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">Ng-flex-layout Demo</h1>
-      <h2 class="project-tagline">Pull from Angular Material layout library. Make flex box layout easier.</h2>
+      <h2 class="project-tagline">Pull from Angular Material layout library. Make flex box layout easier.<br>
+        剥离自Angular Material布局组件，让你使用flexbox布局更简单.</h2>
       <a href="https://github.com/ShaneXie/ng-flex-layout" class="btn">View on GitHub</a>
       <a href="https://github.com/ShaneXie/ng-flex-layout/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/ShaneXie/ng-flex-layout/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
-      <p>Ng-flex-layout Demo</p>
+      <h3>详细文档请翻阅<a href="https://material.angularjs.org/latest/layout/introduction">AngularMaterial官方文档</a></h3>
+      <h3><sub>Please read <a href="https://material.angularjs.org/latest/layout/introduction">Angular Material offical document</a> for more details.</sub></h3>
+      <hr>
+      <h2>子元素水平+垂直居中<sub>children elements vertical and horizontal center alignment</sub></h2>
+      <p>All you need to do is put <code>layout="row" layout-align="center center"</code> on parent element.</p>
+      <div class="demo-wrapper" flex>
+        <pre>
+          &lt;div class="parent-wrapper"
+            layout="row"
+            layout-align="center center"&gt;
+            &lt;div class="small-block"&gt;&lt;/div&gt;
+            &lt;div class="small-block"&gt;&lt;/div&gt;
+            &lt;div class="small-block"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        </pre>
+        <div class="parent-wrapper"
+          layout="row"
+          layout-align="center center">
+          <div class="small-block"></div>
+          <div class="small-block"></div>
+          <div class="small-block"></div>
+        </div>
+      </div>
+      <p><code>layout</code>attribute can be "row" or "column" <br>
+        First value in attribute <code>layout-align</code> is for vertical alignment and the second one is for horizontal.
+        A playground can be found in <a href="https://material.angularjs.org/latest/layout/alignment">angular material official document</a>
+      </p>
 
+      <h2>响应布局<sub>mediaQuery</sub></h2>
+      <img src="https://camo.githubusercontent.com/ad81ae92f8b4285747ce4e48007bf3f104dd5630/687474703a2f2f6d6174657269616c2d64657369676e2e73746f726167652e676f6f676c65617069732e636f6d2f7075626c6973682f6d6174657269616c5f765f342f6d6174657269616c5f6578745f7075626c6973682f3042386f6c5631354a3761625053474678656d46695156527462316b2f6c61796f75745f61646170746976655f627265616b706f696e74735f30312e706e67">
+      <p>mediaQuery definitions:</p>
+      <table>
+        <thead>
+          <tr><th>Breakpoint</th><th>MediaQuery (pixel range)</th><th>Activates when device</th> </tr>
+        </thead>
+        <tbody>
+          <tr><td>xs</td><td>'(max-width: <b>599</b>px)'</td><td>width &lt; 600px</td></tr>
+          <tr><td>gt-xs</td><td>'(min-width: <b>600</b>px)'</td><td>width &gt;= 600px</td></tr>
+          <tr><td>sm</td><td>'(min-width: <b>600</b>px) and (max-width: <b>959</b>px)'</td><td>600px &lt;= width &lt; 960px</td></tr>
+          <tr><td>gt-sm</td><td>'(min-width: <b>960</b>px)'</td><td>width &gt;= 960px</td></tr>
+          <tr><td>md</td><td>'(min-width: <b>960</b>px) and (max-width: <b>1279</b>px)'</td><td>960px &lt;= width &lt; 1280px</td></tr>
+          <tr><td>gt-md</td><td>'(min-width: <b>1280</b>px)'</td><td>width &gt;= 1280px</td></tr>
+          <tr><td>lg</td><td>'(min-width: <b>1280</b>px) and (max-width: <b>1919</b>px)'</td><td>1280px &lt;= width &lt; 1920px</td></tr>
+          <tr><td>gt-lg</td><td>'(min-width: <b>1920</b>px)'</td><td>width &gt;= 1920px</td></tr>
+          <tr><td>xl</td><td>'(min-width: <b>1920</b>px)'</td><td>width &gt;= 1920px</td></tr>
+        </tbody>
+      </table>
+      <p>All those media query suffix could be applied to all the element attribute metioned in this page <br>
+        below is one usage example on<code>layout</code>
+      </p>
+      <div class="demo-wrapper" flex>
+        <pre>
+          &lt;div class="parent-wrapper"
+            layout="row"
+            layout-sm="column"
+            layout-align="center center"&gt;
+            &lt;div class="small-block"&gt;&lt;/div&gt;
+            &lt;div class="small-block"&gt;&lt;/div&gt;
+            &lt;div class="small-block"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        </pre>
+        Decrease the width of your browser window to see the change.
+        <div class="parent-wrapper"
+          layout="row"
+          layout-sm="column"
+          layout-align="center center">
+          <div class="small-block"></div>
+          <div class="small-block"></div>
+          <div class="small-block"></div>
+        </div>
+      </div>
+
+      <h2>子元素布局<sub>Children Layout</sub></h2>
+      <div class="demo-wrapper" flex>
+        <pre>
+          &lt;div class="parent-wrapper"
+            layout="row"
+            layout-align="center center"&gt;
+            &lt;div class="small-block red" flex="25"&gt;flex="25"&lt;/div&gt;
+            &lt;div class="small-block green" flex="33"&gt;flex="33"&lt;/div&gt;
+            &lt;div class="small-block blue" flex&gt;flex&lt;/div&gt;
+          &lt;/div&gt;
+        </pre>
+        Decrease the width of your browser window to see the change.
+        <div class="parent-wrapper"
+          layout="row"
+          layout-sm="column"
+          layout-align="center center"
+          flex>
+          <div class="small-block red" flex="25">flex="25"</div>
+          <div class="small-block green" flex="33">flex="33"</div>
+          <div class="small-block blue" flex>flex</div>
+        </div>
+        <p>
+          Currently, the <code>flex</code> attribute value is restricted to multiples of five, 33 or 66.<br>
+          目前<code>flex</code>的值只能是33，66或者5的倍数
+        </p>
+        <p>To see more other layout options like <code>flex-order</code>,<code>flex-offset</code> plesase visit the <a href="https://material.angularjs.org/latest/layout/children">Official Document</a> </p>
+      </div>
+
+      <h2>其他选项<sub>Extra Options</sub></h2>
+      <ul>
+        <li><code>layout-margin</code> adds margin around each flex child. It also adds a margin to the layout container itself. </li>
+        <li><code>layout-padding</code> adds padding inside each flex child. It also adds padding to the layout container itself.  </li>
+        <li><code>layout-fill</code> forces the layout element to fill its parent container.[强制元素充满父元素]</li>
+        <li><code>layout-wrap</code> allows flex children to wrap within the container if the elements use more than 100%. [子元素超出父元素宽度自动换行]</li>
+        <li><code>show</code>and<code>hide</code>better use with mediaquery :D</li>
+
+      </ul>
+
+      <hr>
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/ShaneXie/ng-flex-layout">Ng-flex-layout Demo</a> is maintained by <a href="https://github.com/ShaneXie">ShaneXie</a>.</span>
 
